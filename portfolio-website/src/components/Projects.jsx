@@ -8,7 +8,7 @@ const projects = [
     tagline: 'US President fighting game in Pokémon format',
     description:
       'Battle it out with your favorite (or least favorite) US Presidents in this Pokémon-inspired turn-based fighting game. Each president has unique stats and special moves inspired by their real-world legacy. Gotta catch \'em all... or elect \'em.',
-    tech: ['Java', 'Game Design', 'OOP'],
+    tech: ['Python', 'Game Design', 'OOP'],
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const projects = [
     tagline: 'Recipe storage & meal scheduling web app',
     description:
       'A full-stack web application that lets users store their favorite recipes and schedule meals throughout the week. Because "what\'s for dinner?" should never be a hard question again.',
-    tech: ['React', 'Node.js', 'Database', 'REST API'],
+    tech: ['AWS', 'Angular', 'Typescript', 'Database', 'REST API'],
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const projects = [
     tagline: 'Info hub for board game enthusiasts',
     description:
       'A comprehensive website featuring information, descriptions, and details on a wide variety of board games. Your one-stop shop for tabletop knowledge — no dice required to navigate it.',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
   },
   {
     id: 5,
