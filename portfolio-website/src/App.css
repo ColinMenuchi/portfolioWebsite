@@ -28,6 +28,12 @@
   margin-bottom: 28px;
 }
 
+.hero-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
 .hero-name {
   font-size: 48px;
   font-weight: 700;
