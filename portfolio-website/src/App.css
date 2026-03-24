@@ -15,8 +15,8 @@
 }
 
 .hero-photo-placeholder {
-  width: 150px;
-  height: 150px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   background: var(--bg-card);
   border: 2px dashed var(--border);
@@ -26,11 +26,14 @@
   color: var(--text-muted);
   font-size: 13px;
   margin-bottom: 28px;
+  overflow: hidden;
 }
 
 .hero-photo {
-  width: 140px;
-  height: 140px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
   border-radius: 50%;
 }
 
