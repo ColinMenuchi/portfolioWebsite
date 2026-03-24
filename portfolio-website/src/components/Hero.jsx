@@ -1,7 +1,7 @@
 const socials = [
-  { label: 'GitHub', href: '#' },
-  { label: 'LinkedIn', href: '#' },
-  { label: 'Email', href: '#' },
+  { label: 'GitHub', href: 'https://github.com/ColinMenuchi' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/colin-menuchi2721/' },
+  { label: 'Email', href: 'colinmenuchi@gmail.com' },
 ]
 
 const Hero = () => {
