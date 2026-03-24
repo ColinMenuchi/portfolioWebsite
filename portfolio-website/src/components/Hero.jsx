@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="hero-section">
       <div className="hero-photo-placeholder">
-        <span>Your Photo Here</span>
+        <img className="hero-photo" src="src/assets/selfPortrait.jpeg" alt="Portrait Not Found."></img>
       </div>
       <h1 className="hero-name">Colin Menuchi</h1>
       <p className="hero-title">Aspiring Software Engineer</p>
