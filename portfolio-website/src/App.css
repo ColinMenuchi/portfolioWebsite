@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(10, 15, 30, 0.85);
+  background: rgba(219, 234, 254, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -51,7 +51,7 @@
 
 .nav-link--external:hover {
   border-color: var(--accent);
-  background: rgba(96, 165, 250, 0.08);
+  background: rgba(29, 78, 216, 0.08);
 }
 
 @media (max-width: 600px) {
@@ -152,6 +152,53 @@
   color: var(--accent);
 }
 
+/* ── About ── */
+.about-section {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-bio {
+  max-width: 680px;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.about-interests-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.about-interests {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-interest-item {
+  font-size: 15px;
+  color: var(--text-muted);
+  padding-left: 20px;
+  position: relative;
+}
+
+.about-interest-item::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
 /* ── Projects ── */
 .projects-section {
   padding-top: 72px;
@@ -223,9 +270,9 @@
   font-size: 11px;
   padding: 3px 10px;
   border-radius: 999px;
-  background: rgba(96, 165, 250, 0.1);
+  background: rgba(29, 78, 216, 0.08);
   color: var(--accent);
-  border: 1px solid rgba(96, 165, 250, 0.2);
+  border: 1px solid rgba(29, 78, 216, 0.2);
   white-space: nowrap;
 }
 
@@ -233,7 +280,7 @@
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(15, 23, 42, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -291,6 +338,23 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.modal-see-more {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--accent);
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.modal-see-more:hover {
+  background: var(--accent-hover);
+  color: #fff;
 }
 
 /* ── Responsive ── */
