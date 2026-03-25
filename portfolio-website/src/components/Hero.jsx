@@ -6,7 +6,7 @@ const socials = [
 
 const Hero = () => {
   return (
-    <section className="hero-section">
+    <section id="home" className="hero-section">
       <div className="hero-photo-placeholder">
         <img className="hero-photo" src="src/assets/selfPortrait.jpeg" alt="Portrait Not Found."></img>
       </div>

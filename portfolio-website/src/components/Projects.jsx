@@ -56,7 +56,7 @@ const Projects = () => {
   const [selected, setSelected] = useState(null)
 
   return (
-    <section className="projects-section">
+    <section id="projects" className="projects-section">
       <h2 className="projects-heading">Projects</h2>
       <div className="projects-grid">
         {projects.map((project) => (

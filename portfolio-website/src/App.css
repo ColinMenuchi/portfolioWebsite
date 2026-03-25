@@ -1,7 +1,79 @@
+/* ── Navbar ── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10, 15, 30, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 4px;
+}
+
+.navbar-external {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-link {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link--external {
+  border: 1px solid var(--border);
+  color: var(--accent);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.nav-link--external:hover {
+  border-color: var(--accent);
+  background: rgba(96, 165, 250, 0.08);
+}
+
+@media (max-width: 600px) {
+  .navbar-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .navbar-links,
+  .navbar-external {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 .app {
   max-width: 960px;
   margin: 0 auto;
   padding: 60px 24px;
+  padding-top: 116px;
 }
 
 /* ── Hero ── */

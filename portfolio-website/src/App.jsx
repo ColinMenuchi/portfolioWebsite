@@ -1,13 +1,17 @@
+import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import './App.css'
 
 function App() {
   return (
-    <div className="app">
-      <Hero />
-      <Projects />
-    </div>
+    <>
+      <Navbar />
+      <div className="app">
+        <Hero />
+        <Projects />
+      </div>
+    </>
   )
 }
 
