@@ -23,6 +23,16 @@ const ProjectModal = ({ project, onClose }) => {
             <span key={t} className="tag">{t}</span>
           ))}
         </div>
+        {project.link && (
+          <a
+            href={project.link}
+            className="modal-see-more"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            See More
+          </a>
+        )}
       </div>
     </div>
   )
