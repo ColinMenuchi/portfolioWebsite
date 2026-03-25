@@ -9,7 +9,7 @@ const photos = [skiing, grilling, root, music]
 
 const interests = [
   'Physical Fitness',
-  'Music',
+  'Music (My Top Albums)',
   'Board Games & TTRPGs',
   'Cooking',
   'Video Editing',
@@ -17,11 +17,19 @@ const interests = [
 
 const interest_examples = {
   'Physical Fitness': ['All-Mountain Skiing', 'Rock Climbing', 'Lifting', 'Running', 'Rowing'],
-  'Music': ['Paramore', 'Los Campesinos'],
+  'Music (My Top Albums)': [],
   'Board Games & TTRPGs': ['Blood on the Clocktower'],
   'Cooking': ['Breakfast', 'Lunch', 'Dinner', 'Let him cook...'],
   'Video Editing': ['@gamingnu on Instagram'],
 }
+
+const spotifyAlbums = [
+  '6GWMugifCHM5gwUZyLlO5t',
+  '71rziY9eLo1tA2dBMxrwhc',
+  '5Dbax7G8SWrP9xyzkOvy2F',
+  '25mCHdzcOvPkKjMOnbjgtK',
+  '78bpIziExqiI9qztvNFlQu',
+]
 
 const About = () => {
   const [current, setCurrent] = useState(0)
@@ -48,18 +56,35 @@ const About = () => {
       </p>
       <div className="about-body">
         <div className="about-interests-col">
-          <h3 className="about-interests-heading">Outside of Tech</h3>
+          <h3 className="about-interests-heading">Favorite Things Beyond Tech</h3>
           <ul className="about-interests">
             {interests.map((item) => (
               <li key={item} className="about-interest-item">
                 {item}
-                <ul className="about-interest-subitems">
-                  {interest_examples[item].map((subItem) => (
-                    <li key={subItem} className="about-interest-subitem">
-                      {subItem}
-                    </li>
-                  ))}
-                </ul>
+                {item === 'Music (My Top Albums)' ? (
+                  <div className="spotify-embeds">
+                    {spotifyAlbums.map((id) => (
+                      <iframe
+                        key={id}
+                        src={`https://open.spotify.com/embed/album/${id}`}
+                        width="100%"
+                        height="80"
+                        style={{ border: 'none' }}
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        title={`Spotify album ${id}`}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <ul className="about-interest-subitems">
+                    {interest_examples[item].map((subItem) => (
+                      <li key={subItem} className="about-interest-subitem">
+                        {subItem}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
