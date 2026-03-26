@@ -4,15 +4,15 @@ import skiing from '../assets/aboutMePhotos/skiing.jpeg'
 import grilling from '../assets/aboutMePhotos/grillingWithFriends.jpeg'
 import root from '../assets/aboutMePhotos/root.jpeg'
 import music from '../assets/aboutMePhotos/music.jpeg'
+import rowing from '../assets/aboutMePhotos/rowing.jpeg'
 
-const photos = [skiing, grilling, root, music]
+const photos = [grilling, skiing, music, root, rowing]
 
 const interests = [
   'Physical Fitness',
   'Music (My Top Albums)',
   'Board Games & TTRPGs',
   'Cooking',
-  'Video Editing',
 ]
 
 const interest_examples = {
@@ -20,7 +20,6 @@ const interest_examples = {
   'Music (My Top Albums)': [],
   'Board Games & TTRPGs': ['Blood on the Clocktower', 'Root', 'Slay the Spire', 'The Gang (Cooperative Poker)', 'DnD'],
   'Cooking': ['Breakfast', 'Lunch', 'Dinner', 'Let him cook...'],
-  'Video Editing': ['@gamingnu on Instagram'],
 }
 
 const spotifyAlbums = [
