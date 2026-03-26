@@ -8,17 +8,50 @@ import rowing from '../assets/aboutMePhotos/rowing.jpeg'
 
 const photos = [grilling, skiing, music, root, rowing]
 
+const skills = {
+  Languages: [
+    { name: 'Python', level: 90 },
+    { name: 'Java', level: 85 },
+    { name: 'JavaScript', level: 80 },
+    { name: 'TypeScript', level: 75 },
+    { name: 'HTML & CSS', level: 90 },
+    { name: 'C', level: 65 },
+    { name: 'RISC-V Assembly', level: 50 },
+  ],
+  Frameworks: [
+    { name: 'React', level: 85 },
+    { name: 'Angular', level: 70 },
+    { name: 'Pygame', level: 80 },
+  ],
+  Libraries: [
+    { name: 'NumPy', level: 75 },
+    { name: 'PyTorch', level: 65 },
+    { name: 'Matplotlib', level: 70 },
+  ],
+  'Dev Tools': [
+    { name: 'Git & GitHub', level: 85 },
+    { name: 'AWS', level: 65 },
+    { name: 'VS Code', level: 90 },
+  ],
+}
+
 const interests = [
   'Physical Fitness',
-  'Music (My Top Albums)',
   'Board Games & TTRPGs',
   'Cooking (Favorite Things to Make)',
+  'Music (My Top Albums)',
 ]
 
 const interest_examples = {
   'Physical Fitness': ['All-Mountain Skiing', 'Rock Climbing', 'Lifting', 'Running', 'Rowing'],
   'Music (My Top Albums)': [],
-  'Board Games & TTRPGs': ['Blood on the Clocktower', 'Root', 'Slay the Spire', 'The Gang (Cooperative Poker)', 'DnD'],
+  'Board Games & TTRPGs': [
+    { label: 'Blood on the Clocktower', href: 'https://bloodontheclocktower.com' },
+    { label: 'Root', href: 'https://ledergames.com/products/root-a-game-of-woodland-might-and-right' },
+    { label: 'Slay the Spire', href: 'https://boardgamegeek.com/boardgame/338960/slay-the-spire-the-board-game' },
+    { label: 'The Gang (Cooperative Poker)', href: 'https://boardgamegeek.com/boardgame/411567/the-gang' },
+    { label: 'DnD', href: 'https://www.dndbeyond.com' },
+  ],
   'Cooking (Favorite Things to Make)': ['Breakfast: Omelet, Frittata, Bacon',
      'Dinner: Steak, Burgers, Seafoods, Pastas, French Fries/Potato Chips (From Scratch)',
       '"Let him cook."'],
@@ -34,6 +67,7 @@ const spotifyAlbums = [
 
 const About = () => {
   const [current, setCurrent] = useState(0)
+  const [activeSkillTab, setActiveSkillTab] = useState('Languages')
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -55,6 +89,32 @@ const About = () => {
         staring at a screen, you can find me exploring the world around me and staying inspired by
         the things I love.
       </p>
+      <div className="skills-section">
+        <div className="skills-tabs">
+          {Object.keys(skills).map((tab) => (
+            <button
+              key={tab}
+              className={`skills-tab${activeSkillTab === tab ? ' skills-tab--active' : ''}`}
+              onClick={() => setActiveSkillTab(tab)}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+        <div className="skills-bars" key={activeSkillTab}>
+          {skills[activeSkillTab].map((skill, i) => (
+            <div key={skill.name} className="skill-row">
+              <span className="skill-name">{skill.name}</span>
+              <div className="skill-bar-track">
+                <div
+                  className="skill-bar-fill"
+                  style={{ '--level': `${skill.level}%`, animationDelay: `${i * 0.06}s` }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="about-body">
         <div className="about-interests-col">
           <h3 className="about-interests-heading">My Favorite Things Beyond Tech</h3>
@@ -80,8 +140,10 @@ const About = () => {
                 ) : (
                   <ul className="about-interest-subitems">
                     {interest_examples[item].map((subItem) => (
-                      <li key={subItem} className="about-interest-subitem">
-                        {subItem}
+                      <li key={typeof subItem === 'string' ? subItem : subItem.label} className="about-interest-subitem">
+                        {typeof subItem === 'string' ? subItem : (
+                          <a href={subItem.href} target="_blank" rel="noopener noreferrer" className="game-link">{subItem.label}</a>
+                        )}
                       </li>
                     ))}
                   </ul>

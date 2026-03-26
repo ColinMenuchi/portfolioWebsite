@@ -415,6 +415,80 @@
   color: var(--accent);
 }
 
+.skills-section {
+  margin-bottom: 40px;
+}
+
+.skills-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.skills-tab {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: none;
+  font-size: 13px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  font-family: inherit;
+}
+
+.skills-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.skills-tab--active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.skills-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.skill-name {
+  font-size: 13px;
+  color: var(--text-muted);
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.skill-bar-track {
+  flex: 1;
+  height: 8px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  animation: skill-grow 0.5s ease forwards;
+}
+
+@keyframes skill-grow {
+  to { width: var(--level); }
+}
+
 .about-body {
   display: flex;
   gap: 48px;
@@ -435,8 +509,8 @@
 }
 
 .carousel-photo {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -508,6 +582,32 @@
     width: 100%;
     height: 260px;
   }
+}
+
+.game-link {
+  position: relative;
+}
+
+.game-link::after {
+  content: 'Click to Learn More!';
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background: var(--text);
+  color: var(--bg);
+  font-size: 11px;
+  white-space: nowrap;
+  padding: 4px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.game-link:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
 }
 
 .spotify-embeds {
