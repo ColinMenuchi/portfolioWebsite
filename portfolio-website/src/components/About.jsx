@@ -10,28 +10,29 @@ const photos = [grilling, skiing, music, root, rowing]
 
 const skills = {
   Languages: [
-    { name: 'Python', level: 90 },
-    { name: 'Java', level: 85 },
-    { name: 'JavaScript', level: 80 },
-    { name: 'TypeScript', level: 75 },
-    { name: 'HTML & CSS', level: 90 },
-    { name: 'C', level: 65 },
-    { name: 'RISC-V Assembly', level: 50 },
+    { name: 'Java', years: 4 },
+    { name: 'Python', years: 3 },
+    { name: 'HTML & CSS', years: 2.5 },
+    { name: 'JavaScript', years: 2 },
+    { name: 'TypeScript', years: 1.5 },
+    { name: 'C', years: 1 },
+    { name: 'RISC-V Assembly', years: 1 },
   ],
   Frameworks: [
-    { name: 'React', level: 85 },
-    { name: 'Angular', level: 70 },
-    { name: 'Pygame', level: 80 },
+    { name: 'Angular', years: 1.5 },
+    { name: "React (technically a library but I didn't want Angular to be lonely)", years: 1 },
   ],
   Libraries: [
-    { name: 'NumPy', level: 75 },
-    { name: 'PyTorch', level: 65 },
-    { name: 'Matplotlib', level: 70 },
+    { name: 'Pygame', years: 2.5 },
+    { name: 'NumPy', years: 2 },
+    { name: 'Matplotlib', years: 2 },
+    { name: 'PyTorch', years: 1.5 },
+    { name: 'Pandas', years: 0.5 },
   ],
   'Dev Tools': [
-    { name: 'Git & GitHub', level: 85 },
-    { name: 'AWS', level: 65 },
-    { name: 'VS Code', level: 90 },
+    { name: 'Git & GitHub', years: 3 },
+    { name: 'VS Code', years: 3 },
+    { name: 'AWS', years: 1.5 },
   ],
 }
 
@@ -53,7 +54,7 @@ const interest_examples = {
     { label: 'DnD', href: 'https://www.dndbeyond.com' },
   ],
   'Cooking (Favorite Things to Make)': ['Breakfast: Omelet, Frittata, Bacon',
-     'Dinner: Steak, Burgers, Seafoods, Pastas, French Fries/Potato Chips (From Scratch)',
+     'Dinner: Seafoods, Pastas, French Fries (From Scratch)',
       '"Let him cook."'],
 }
 
@@ -63,6 +64,14 @@ const spotifyAlbums = [
   '5Dbax7G8SWrP9xyzkOvy2F',
   '25mCHdzcOvPkKjMOnbjgtK',
   '78bpIziExqiI9qztvNFlQu',
+]
+
+const spotifyTracks = [
+  '3uJEPDZNFtTE6zpzMDJtQN',
+  '7fx2rt43UfclOOulPwBYk2',
+  '4gMgiXfqyzZLMhsksGmbQV',
+  '5zQcWP2p18Zkv8UxQd4O5B',
+  '4atMrAadB7dS8xn9vfk9PQ',
 ]
 
 const About = () => {
@@ -102,22 +111,26 @@ const About = () => {
           ))}
         </div>
         <div className="skills-bars" key={activeSkillTab}>
-          {skills[activeSkillTab].map((skill, i) => (
-            <div key={skill.name} className="skill-row">
-              <span className="skill-name">{skill.name}</span>
-              <div className="skill-bar-track">
-                <div
-                  className="skill-bar-fill"
-                  style={{ '--level': `${skill.level}%`, animationDelay: `${i * 0.06}s` }}
-                />
+          {(() => {
+            const maxYears = Math.max(...skills[activeSkillTab].map((s) => s.years))
+            return skills[activeSkillTab].map((skill, i) => (
+              <div key={skill.name} className="skill-row">
+                <span className="skill-name">{skill.name}</span>
+                <div className="skill-bar-track">
+                  <div
+                    className="skill-bar-fill"
+                    style={{ '--level': `${(skill.years / maxYears) * 100}%`, animationDelay: `${i * 0.06}s` }}
+                  />
+                </div>
+                <span className="skill-years">{skill.years} yr{skill.years !== 1 ? 's' : ''}</span>
               </div>
-            </div>
-          ))}
+            ))
+          })()}
         </div>
       </div>
       <div className="about-body">
         <div className="about-interests-col">
-          <h3 className="about-interests-heading">My Favorite Things Beyond Tech</h3>
+          <h3 className="about-interests-heading">My Favorite Things Beyond Tech!</h3>
           <ul className="about-interests">
             {interests.map((item) => (
               <li key={item} className="about-interest-item">
@@ -170,6 +183,23 @@ const About = () => {
                 aria-label={`Go to photo ${i + 1}`}
               />
             ))}
+          </div>
+          <div className="top-songs">
+            <p className="about-interest-item">Music (My Top Song from Each Album)</p>
+            <div className="spotify-embeds">
+              {spotifyTracks.map((id) => (
+                <iframe
+                  key={id}
+                  src={`https://open.spotify.com/embed/track/${id}`}
+                  width="100%"
+                  height="80"
+                  style={{ border: 'none' }}
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  title={`Spotify track ${id}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

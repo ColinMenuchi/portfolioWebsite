@@ -469,6 +469,15 @@
   flex-shrink: 0;
 }
 
+.skill-years {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 600;
+  width: 36px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
 .skill-bar-track {
   flex: 1;
   height: 8px;
@@ -509,8 +518,8 @@
 }
 
 .carousel-photo {
-  width: 500px;
-  height: 500px;
+  width: 485px;
+  height: 485px;
   object-fit: cover;
   border-radius: 12px;
   border: 1px solid var(--border);
