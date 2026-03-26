@@ -730,6 +730,15 @@
   color: #fff;
 }
 
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .hero-name {
