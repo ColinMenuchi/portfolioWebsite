@@ -12,14 +12,16 @@ const interests = [
   'Physical Fitness',
   'Music (My Top Albums)',
   'Board Games & TTRPGs',
-  'Cooking',
+  'Cooking (Favorite Things to Make)',
 ]
 
 const interest_examples = {
   'Physical Fitness': ['All-Mountain Skiing', 'Rock Climbing', 'Lifting', 'Running', 'Rowing'],
   'Music (My Top Albums)': [],
   'Board Games & TTRPGs': ['Blood on the Clocktower', 'Root', 'Slay the Spire', 'The Gang (Cooperative Poker)', 'DnD'],
-  'Cooking': ['Breakfast', 'Lunch', 'Dinner', 'Let him cook...'],
+  'Cooking (Favorite Things to Make)': ['Breakfast: Omelet, Frittata, Bacon',
+     'Dinner: Steak, Burgers, Seafoods, Pastas, French Fries/Potato Chips (From Scratch)',
+      '"Let him cook."'],
 }
 
 const spotifyAlbums = [
