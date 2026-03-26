@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react'
 const entries = [
   {
     type: 'Education',
-    title: 'University of Vermont',
+    title: 'University of Vermont, Burlington, VT',
     subtitle: 'Computer Science',
     date: 'Aug 2023 – May 2024',
     bullets: ['GPA: 4.0/4.0', 'Studied Computer Science fundamentals'],
@@ -32,7 +32,7 @@ const entries = [
   {
     type: 'Leadership',
     title: 'Member, FirstByte',
-    subtitle: 'Northeastern University',
+    subtitle: 'Northeastern University, Boston, MA',
     date: 'Sep 2024 – Apr 2025',
     bullets: ['Designed CS curricula for Boston high schoolers', 'Taught 40 students HTML & CSS'],
   },
@@ -43,6 +43,13 @@ const entries = [
     date: 'Jul 2025 – Present',
     bullets: ['Design & publish media for NU board game club', 'Grew community engagement online & in person'],
   },
+  {
+    type: 'Experience',
+    title: 'Software Engineering Intern',
+    subtitle: 'Fidelity Investments, Boston, MA',
+    date: 'June 2026 - Aug 2026',
+    bullets: ['Incoming SWE Intern', 'Summer 2026']
+  }
 ]
 
 const Experience = () => {
