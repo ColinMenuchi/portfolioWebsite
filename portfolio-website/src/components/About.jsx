@@ -18,7 +18,7 @@ const interests = [
 const interest_examples = {
   'Physical Fitness': ['All-Mountain Skiing', 'Rock Climbing', 'Lifting', 'Running', 'Rowing'],
   'Music (My Top Albums)': [],
-  'Board Games & TTRPGs': ['Blood on the Clocktower'],
+  'Board Games & TTRPGs': ['Blood on the Clocktower', 'Root', 'Slay the Spire', 'The Gang (Cooperative Poker)', 'DnD'],
   'Cooking': ['Breakfast', 'Lunch', 'Dinner', 'Let him cook...'],
   'Video Editing': ['@gamingnu on Instagram'],
 }
@@ -56,7 +56,7 @@ const About = () => {
       </p>
       <div className="about-body">
         <div className="about-interests-col">
-          <h3 className="about-interests-heading">Favorite Things Beyond Tech</h3>
+          <h3 className="about-interests-heading">My Favorite Things Beyond Tech</h3>
           <ul className="about-interests">
             {interests.map((item) => (
               <li key={item} className="about-interest-item">
