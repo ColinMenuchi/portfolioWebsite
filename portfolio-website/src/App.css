@@ -259,6 +259,22 @@
   box-shadow: 0 4px 16px rgba(29, 78, 216, 0.1);
 }
 
+.timeline-card-hover-overlay {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.timeline-card:hover .timeline-card-hover-overlay {
+  opacity: 1;
+}
+
 .timeline-entry.above .timeline-card {
   bottom: calc(50% + 31px);
 }
