@@ -8,7 +8,7 @@ const entries = [
     subtitle: 'Computer Science',
     date: 'Aug 2023 – May 2024',
     bullets: ['GPA: 4.0/4.0', 'Studied Computer Science fundamentals'],
-    description: 'Started my CS journey at UVM, where I built a strong foundation in computer science fundamentals while maintaining a perfect 4.0 GPA. Completed coursework in data structures, algorithms, and programming principles before transferring to Northeastern.',
+    description: 'I started my CS journey at UVM, where I built a strong foundation in computer science fundamentals while maintaining a perfect 4.0 GPA. I completed coursework in programming principles, OOP, and calculus before transferring to Northeastern in Fall 2024.',
   },
   {
     type: 'Experience',
