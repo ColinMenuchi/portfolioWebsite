@@ -415,8 +415,85 @@
   color: var(--accent);
 }
 
-.skills-section {
+.skills-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 48px;
   margin-bottom: 40px;
+}
+
+.skills-section {
+  flex: 1;
+}
+
+/* ── Tech Orb ── */
+.tech-orb-scene {
+  width: 130px;
+  height: 130px;
+  perspective: 700px;
+  cursor: grab;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.tech-orb-scene:active {
+  cursor: grabbing;
+}
+
+.tech-orb-scene:active .tech-orb-hint {
+  opacity: 0;
+}
+
+.tech-orb-cube {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.tech-orb-face {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.tech-orb-face--front  { transform: rotateY(0deg)    translateZ(65px); }
+.tech-orb-face--back   { transform: rotateY(180deg)  translateZ(65px); }
+.tech-orb-face--right  { transform: rotateY(90deg)   translateZ(65px); }
+.tech-orb-face--left   { transform: rotateY(-90deg)  translateZ(65px); }
+.tech-orb-face--top    { transform: rotateX(90deg)   translateZ(65px); }
+.tech-orb-face--bottom { transform: rotateX(-90deg)  translateZ(65px); }
+
+.tech-orb-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: monospace;
+  opacity: 0.85;
+}
+
+.tech-orb-hint {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: monospace;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.tech-orb-hint--visible {
+  opacity: 1;
 }
 
 .skills-tabs {

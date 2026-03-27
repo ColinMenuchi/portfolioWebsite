@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import TechOrb from './TechOrb'
 
 import skiing from '../assets/aboutMePhotos/skiing.jpeg'
 import grilling from '../assets/aboutMePhotos/grillingWithFriends.jpeg'
@@ -94,13 +95,17 @@ const About = () => {
       <p className="about-bio">
         Hi, I'm Colin! I'm a thrid-year student studying Computer Science with a concentration in
         AI at Northeastern University, and an incoming software engineering intern at Fidelity Investments!
-        student with a love for building things that matter.
-        Whether I'm designing AI systems, crafting full-stack applications, or diving into a new
-        programming challenge, I bring curiosity and creativity to everything I do. When I'm not
-        staring at a screen, you can find me exploring the world around me and staying inspired by
-        the things I love.
+        Whether I'm building AI models, crafting full-stack applications, or diving into a new
+        programming challenge, I always strive to make something impactful or beneficial to others!
+        More specifically, I'm most interested in utilizing AI to enhance the medical, education,
+        and finance industries. I bring curiosity and creativity to everything I do, and to learn more about
+        what I have done, check out the "Experience" and Projects" sections on this site! Meanwhile, if you're
+        interested to know what I'm up to when I'm not staring at a screen, you can find me outside exploring the world
+        or doing any of the things mentioned below my tech stack proficiencies!
       </p>
-      <div className="skills-section">
+      <h3 className="about-interests-heading">My Proficiencies & Favorite Things Tech Stack:</h3>
+      <div className="skills-wrapper">
+        <div className="skills-section">
         <div className="skills-tabs">
           {Object.keys(skills).map((tab) => (
             <button
@@ -129,6 +134,8 @@ const About = () => {
             ))
           })()}
         </div>
+        </div>
+        <TechOrb />
       </div>
       <div className="about-body">
         <div className="about-interests-col">
