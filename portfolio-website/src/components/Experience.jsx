@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from 'react'
 import ExperienceModal from './ExperienceModal'
+import resumePdf from '../Colin Menuchi.pdf'
 
 const entries = [
   {
@@ -82,7 +83,7 @@ const Experience = () => {
   return (
     <section id="experience" className="experience-section">
       <h2 className="experience-heading">Experience</h2>
-      <h4 className="experience-subheading">For more information on everything in this timeline check out my resume!</h4>
+      <p className="experience-subheading">For more information on everything in this timeline check out my <a href={resumePdf} target="_blank" rel="noreferrer">resume</a>!</p>
       <div className="timeline-wrapper">
         <button className="timeline-arrow timeline-arrow--left" onClick={() => scroll(-1)} aria-label="Scroll left">‹</button>
         <div className="timeline-track" ref={trackRef}>
