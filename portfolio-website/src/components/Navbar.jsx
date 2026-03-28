@@ -3,7 +3,7 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: 'mailto:colinmenuchi@gmail.com?subject=Reaching out from Your Website' },
 ]
 
 const externalLinks = [
