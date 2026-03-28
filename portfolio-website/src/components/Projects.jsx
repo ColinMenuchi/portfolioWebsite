@@ -56,7 +56,7 @@ const projects = [
     tagline: 'Reinforcement Learning Maze Solver',
     description:
       'Two AI agents trained with reinforcement learning to navigate and solve mazes. One\'s goal is to efind the maze\'s exit, the other\'s is to hunt down and catch the first before that happens! Watch the agents start completely clueless and slowly figure out the optimal path, kind of like me when I\'m at IKEA.',
-    tech: ['Python', 'Reinforcement Learning', 'AI', 'NumPy'],
+    tech: ['Python', 'Reinforcement Learning', 'AI', 'NumPy', 'PyTorch'],
     link: "https://github.com/RobW321/agentic_navigation_system",
     image: mazeAI,
   },
@@ -65,8 +65,8 @@ const projects = [
     name: 'MentalBERT',
     tagline: 'Transformer-based mental health text detection',
     description:
-      'A fine-tuned BERT transformer model that identifies signs of mental health disorders in social media texts. Built to contribute to early detection and support resources for those who need it most.',
-    tech: ['Python', 'NLP', 'Transformers', 'BERT', 'PyTorch'],
+      'A fine-tuned BERT transformer model that identifies signs of mental health disorders in social media texts. Currently building this to contribute to early detection and support resources for those who need it most.',
+    tech: ['Python', 'AI', 'NLP', 'Transformers', 'BERT', 'PyTorch'],
     link: null,
     image: mentalHealth,
   },
