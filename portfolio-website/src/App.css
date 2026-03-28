@@ -1,4 +1,4 @@
-/* ── Navbar ── */
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -76,7 +76,7 @@
   padding-top: 116px;
 }
 
-/* ── Hero ── */
+/* Hero */
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -152,7 +152,7 @@
   color: var(--accent);
 }
 
-/* ── Experience ── */
+/* Experience */
 .experience-section {
   padding: 72px 0;
   border-bottom: 1px solid var(--border);
@@ -161,6 +161,12 @@
 .experience-heading {
   font-size: 32px;
   font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.experience-subheading {
+  font-size: 16px;
+  font-weight: 350;
   margin-bottom: 40px;
 }
 
@@ -384,7 +390,7 @@
   text-align: center;
 }
 
-/* ── About ── */
+/* About */
 .about-section {
   padding: 72px 0;
   border-bottom: 1px solid var(--border);
@@ -442,7 +448,7 @@
   flex: 1;
 }
 
-/* ── Tech Orb ── */
+/* Tech Orb */
 .tech-orb-scene {
   width: 130px;
   height: 130px;
@@ -742,7 +748,7 @@
   color: var(--accent);
 }
 
-/* ── Projects ── */
+/* Projects */
 .projects-section {
   padding-top: 72px;
 }
@@ -931,7 +937,7 @@
   color: #fff;
 }
 
-/* ── Footer ── */
+/* Footer */
 .footer {
   text-align: center;
   padding: 24px;

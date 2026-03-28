@@ -8,7 +8,7 @@ const entries = [
     subtitle: 'Computer Science',
     date: 'Aug 2023 – May 2024',
     bullets: ['GPA: 4.0/4.0', 'Studied Computer Science fundamentals'],
-    description: 'I started my CS journey at UVM, where I built a strong foundation in computer science fundamentals while maintaining a perfect 4.0 GPA. I completed coursework in programming principles, OOP, and calculus before transferring to Northeastern in Fall 2024.',
+    description: 'I started my CS journey at UVM, where I built a strong foundation in computer science fundamentals while maintaining a perfect 4.0 GPA. I completed coursework in programming principles, OOP, and calculus before transferring to Northeastern in Fall 2024 to begin my sophomore year.',
   },
   {
     type: 'Experience',
@@ -16,15 +16,15 @@ const entries = [
     subtitle: 'Computer Programming I · UVM',
     date: 'Jan 2024 – May 2024',
     bullets: ['Led 150+ students through Python weekly', 'In-depth tutoring in lab sessions'],
-    description: "Served as a TA for UVM's intro programming course, leading weekly lab sessions for 150+ students learning Python. Provided one-on-one tutoring, helped debug code, and explained core programming concepts in ways that clicked for beginners.",
+    description: "I served as a TA for UVM's intro programming course. I led weekly lab sessions for 150+ students who were learning Python and coding fundamentals. In this role, I provided one-on-one tutoring, helped debug code, and explained core programming concepts in ways that clicked for beginners.",
   },
   {
     type: 'Experience',
     title: 'Senior Staff',
     subtitle: 'Town of Hingham Recreation Dept.',
-    date: 'May 2024 – Aug 2025',
+    date: 'Summers May 2024 – Aug 2025',
     bullets: ['Designed & ran a weekly STEM summer camp', 'Supervised ~15 counselors weekly'],
-    description: 'Designed and ran a weekly STEM-focused summer camp program from the ground up, introducing kids to science, technology, engineering, and math through hands-on activities. Also supervised a team of ~15 junior counselors, managing schedules and ensuring smooth day-to-day operations.',
+    description: "After working for my town's recreation department as a summer camp counselor in high school, I was recruited to help oversee their entire summer program. In this position, I designed and ran a weekly STEM-focused summer camp program from the ground up, introducing kids to science, technology, engineering, and math through hands-on activities. I also supervised a team (that would change each week) of ~15 counselors, managing schedules and ensuring smooth day-to-day operations.",
   },
   {
     type: 'Education',
@@ -32,7 +32,7 @@ const entries = [
     subtitle: 'B.S. Computer Science · Khoury College',
     date: 'Sep 2024 – May 2027',
     bullets: ['GPA: 3.84/4.0', 'OOD, Algorithms, AI, Computer Systems'],
-    description: "Currently pursuing a B.S. in Computer Science at Northeastern's Khoury College of Computer Sciences. Coursework spans object-oriented design, algorithms, artificial intelligence, and computer systems. Northeastern's co-op program gives me the chance to alternate between rigorous academics and real-world industry experience.",
+    description: "I'm currently pursuing a B.S. in Computer Science at Northeastern's Khoury College of Computer Sciences. I transferred out of UVM because I felt like I was taking advantage of all the opportunities I had there, and I wanted more. My completed coursework here spans object-oriented design,  data structures & algorithms, artificial intelligence, and operating systems.",
   },
   {
     type: 'Leadership',
@@ -40,7 +40,7 @@ const entries = [
     subtitle: 'Northeastern University, Boston, MA',
     date: 'Sep 2024 – Apr 2025',
     bullets: ['Designed CS curricula for Boston high schoolers', 'Taught 40 students HTML & CSS'],
-    description: 'Joined FirstByte, a student org at Northeastern dedicated to bringing CS education to Boston-area high schools. Designed and delivered a curriculum teaching 40 students HTML and CSS, making web development approachable and fun for students with little to no prior experience.',
+    description: 'Upon arrving at Northeastern, I joined FirstByte, a student org. dedicated to bringing CS education to Boston-area high schools. In this club, I designed and delivered a curriculum teaching 40 students HTML and CSS, making web development approachable and fun for students with little to no prior experience.',
   },
   {
     type: 'Leadership',
@@ -48,7 +48,7 @@ const entries = [
     subtitle: 'NUAGE · Northeastern University',
     date: 'Jul 2025 – Present',
     bullets: ['Design & publish media for NU board game club', 'Grew community engagement online & in person'],
-    description: "Leading public relations for NUAGE, Northeastern's board game club. I design and publish social media content, manage the club's online presence, and help coordinate events — all while growing a welcoming community for tabletop enthusiasts on campus.",
+    description: "I leading public relations for NUAGE, Northeastern's board game club. I design and publish social media content, manage the club's online presence, and help coordinate events while growing a welcoming community for tabletop enthusiasts on campus. Additionally, I have taken the initiative to develop a website for the club! For more information on that, check out my projects below!",
   },
   {
     type: 'Experience',
@@ -56,7 +56,7 @@ const entries = [
     subtitle: 'Fidelity Investments, Boston, MA',
     date: 'June 2026 – Aug 2026',
     bullets: ['Incoming SWE Intern', 'Summer 2026'],
-    description: "Incoming Software Engineering Intern at Fidelity Investments for Summer 2026. Looking forward to contributing to real-world financial software systems and growing as an engineer in a fast-paced, high-impact environment.",
+    description: "I'm an incoming Software Engineering Intern at Fidelity Investments for Summer 2026. I'm looking forward to contributing to real-world financial software systems and growing as a developer in a fast-paced, high-impact environment. I can't wait to see what the future brings!",
     link: 'https://www.fidelity.com',
   },
 ]
@@ -82,6 +82,7 @@ const Experience = () => {
   return (
     <section id="experience" className="experience-section">
       <h2 className="experience-heading">Experience</h2>
+      <h4 className="experience-subheading">For more information on everything in this timeline check out my resume!</h4>
       <div className="timeline-wrapper">
         <button className="timeline-arrow timeline-arrow--left" onClick={() => scroll(-1)} aria-label="Scroll left">‹</button>
         <div className="timeline-track" ref={trackRef}>
