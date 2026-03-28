@@ -18,22 +18,32 @@ const skills = {
     { name: 'TypeScript', years: 1.5 },
     { name: 'C', years: 1 },
     { name: 'RISC-V Assembly', years: 1 },
+    { name: "SQL", years: 0.5 }
   ],
   Frameworks: [
+    { name: 'Flask', years: 2 },
     { name: 'Angular', years: 1.5 },
-    { name: "React (technically a library but I didn't want Angular to be lonely)", years: 1 },
+    { name: 'JUnit', years: 1 },
+    { name: 'Spring Boot', years: 1 },
   ],
   Libraries: [
-    { name: 'Pygame', years: 2.5 },
+    { name: 'Pygame', years: 3 },
+    { name: "React", years: 2 },
     { name: 'NumPy', years: 2 },
     { name: 'Matplotlib', years: 2 },
     { name: 'PyTorch', years: 1.5 },
+    { name: 'Scikit-learn', years: 1.5 },
+    { name: "Seaborn", years: 1 },
     { name: 'Pandas', years: 0.5 },
   ],
   'Dev Tools': [
+    { name: 'IntelliJ', years: 4 },
     { name: 'Git & GitHub', years: 3 },
     { name: 'VS Code', years: 3 },
+    { name: 'PyCharm', years: 3 },
+    { name: 'Node.js', years: 2 },
     { name: 'AWS', years: 1.5 },
+    { name: 'CLion', years: 1 },
   ],
 }
 
@@ -82,7 +92,7 @@ const About = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % photos.length)
-    }, 3000)
+    }, 5000)
     return () => clearInterval(timer)
   }, [])
 
