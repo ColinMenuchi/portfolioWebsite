@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import selfPortrait from '../assets/selfPortrait.jpeg'
 
 const socials = [
   { label: 'GitHub', href: 'https://github.com/ColinMenuchi' },
@@ -52,7 +53,7 @@ const Hero = () => {
   return (
     <section id="home" className="hero-section">
       <div className="hero-photo-placeholder">
-        <img className="hero-photo" src="src/assets/selfPortrait.jpeg" alt="Portrait Not Found."></img>
+        <img className="hero-photo" src={selfPortrait} alt="Portrait Not Found."></img>
       </div>
       <h1 className="hero-name">Colin Menuchi</h1>
       <p className="hero-title">I am a {displayed}<span className="hero-cursor">|</span></p>
