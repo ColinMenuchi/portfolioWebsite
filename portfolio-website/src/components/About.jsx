@@ -44,6 +44,7 @@ const skills = {
     { name: 'Node.js', years: 2 },
     { name: 'AWS', years: 1.5 },
     { name: 'CLion', years: 1 },
+    { name: 'Vite', years: 1 },
   ],
 }
 
