@@ -64,7 +64,7 @@ const interest_examples = {
     { label: 'The Gang (Cooperative Poker)', href: 'https://boardgamegeek.com/boardgame/411567/the-gang' },
     { label: 'DnD', href: 'https://www.dndbeyond.com' },
   ],
-  'Cooking (Favorite Things to Make)': ['Breakfast: Omelet, Frittata, Bacon',
+  'Cooking (Favorite Things to Make)': ['Breakfast: Omelet, Frittata, Belgian Waffles',
      'Dinner: Seafoods, Pastas, French Fries (From Scratch)',
       '"Let him cook."'],
 }
