@@ -123,6 +123,15 @@
   letter-spacing: 0.5px;
 }
 
+.hero-cursor {
+  display: inline-block;
+  animation: blink 0.7s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
 .hero-bio {
   max-width: 580px;
   color: var(--text-muted);
