@@ -8,7 +8,7 @@ const socials = [
 ]
 
 const TITLES = [
-  'software engineer',
+  'software engineering intern at Fidelity Investments',
   'Computer Science student at Northeastern University',
   'full-stack developer',
   'problem solver',
